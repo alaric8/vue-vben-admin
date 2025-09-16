@@ -5,6 +5,10 @@
       "path": "apps/backend-mock",
     },
     {
+      "name": "@alaric/hyperf",
+      "path": "apps/hyperf",
+    },
+    {
       "name": "@vben/web-antd",
       "path": "apps/web-antd",
     },
