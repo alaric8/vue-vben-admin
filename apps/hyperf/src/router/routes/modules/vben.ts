@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router';
 import {
   VBEN_ANT_PREVIEW_URL,
   VBEN_DOC_URL,
+  VBEN_ELE_PREVIEW_URL,
   VBEN_GITHUB_URL,
   VBEN_LOGO_URL,
   VBEN_NAIVE_PREVIEW_URL,
@@ -44,6 +45,17 @@ const routes: RouteRecordRaw[] = [
         },
       },
       {
+        name: 'VbenAntdv',
+        path: '/vben-admin/antdv',
+        component: IFrameView,
+        meta: {
+          badgeType: 'dot',
+          icon: SvgAntdvLogoIcon,
+          link: VBEN_ANT_PREVIEW_URL,
+          title: $t('demos.vben.antdv'),
+        },
+      },
+      {
         name: 'VbenNaive',
         path: '/vben-admin/naive',
         component: IFrameView,
@@ -55,27 +67,27 @@ const routes: RouteRecordRaw[] = [
         },
       },
       {
-        name: 'VbenAntd',
-        path: '/vben-admin/antd',
+        name: 'VbenElementPlus',
+        path: '/vben-admin/ele',
         component: IFrameView,
         meta: {
           badgeType: 'dot',
-          icon: SvgAntdvLogoIcon,
-          link: VBEN_ANT_PREVIEW_URL,
-          title: $t('demos.vben.antdv'),
+          icon: 'logos:element',
+          link: VBEN_ELE_PREVIEW_URL,
+          title: $t('demos.vben.element-plus'),
         },
       },
     ],
   },
   {
-    name: 'VbenAbout',
-    path: '/vben-admin/about',
     component: () => import('#/views/_core/about/index.vue'),
     meta: {
       icon: 'lucide:copyright',
-      title: $t('demos.vben.about'),
       order: 9999,
+      title: $t('demos.vben.about'),
     },
+    name: 'VbenAbout',
+    path: '/vben-admin/about',
   },
 ];
 
